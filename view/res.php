@@ -108,9 +108,12 @@ function generateRandomReference() {
 
             <div class="menu" style="margin-left: 120px; margin-top: -10px;">
                 <ul>
-                <li><a href="index.php">HOME</a></li>
+                <ul>
+                    <li><a href="index.php">ACCEUIL</a></li>
                     <li><a href="Voitures.php">VOITURES</a></li>
                     <li><a href="Circuit.php">CIRCUITS</a></li>
+                    <li><a href="information.html">INFORMATION</a></li>
+                </ul>
                    
                 </ul>
             </div>

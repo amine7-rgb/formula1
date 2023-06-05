@@ -72,11 +72,12 @@ function generateRandomReference() {
 
             <div class="menu">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="#">VOITURE</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">CONCEPTION</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <ul>
+                    <li><a href="index.php">ACCEUIL</a></li>
+                    <li><a href="Voitures.php">VOITURES</a></li>
+                    <li><a href="Circuit.php">CIRCUITS</a></li>
+                    <li><a href="information.html">INFORMATION</a></li>
+                </ul>
                 </ul>
             </div>
 
