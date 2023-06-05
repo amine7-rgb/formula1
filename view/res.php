@@ -62,6 +62,26 @@ function generateRandomReference() {
     <title>resaweb</title>
     <link rel="stylesheet" href="styl.css">
 
+ 
+    <style>
+    .logo-img {
+        width: 70px;
+        position: absolute;
+        top: 30px;
+        left: 355px;
+        height: 50px;
+    }
+
+    .logo-text {
+        margin-left: 80px;
+        color: #00d9e1;
+        font-size: 35px;
+        font-family: Arial;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+</style>
+
     <style>
         /* Animation for the title */
         @keyframes titleAnimation {
@@ -80,9 +100,11 @@ function generateRandomReference() {
 
 
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FAST ONE</h2>
-            </div>
+            
+<div class="icon">
+    <img src="image/fast one.jpg" alt="Fast One Logo" class="logo-img">
+    <h2 class="logo-text">FAST ONE</h2>
+</div>
 
             <div class="menu" style="margin-left: 120px; margin-top: -10px;">
                 <ul>

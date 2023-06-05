@@ -28,14 +28,36 @@ if (isset($_GET['id'])) {
     <title>resaweb</title>
     <link rel="stylesheet" href="style.css">
     
+   
+ 
+    <style>
+    .logo-img {
+        width: 70px;
+        position: absolute;
+        top: 30px;
+        left: 355px;
+        height: 50px;
+    }
+
+    .logo-text {
+        margin-left: 80px;
+        color: #00d9e1;
+        font-size: 35px;
+        font-family: Arial;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+</style>
 </head>
 <body>
 
     <div class="main">
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FAST ONE</h2>
-            </div>
+           
+<div class="icon">
+    <img src="image/fast one.jpg" alt="Fast One Logo" class="logo-img">
+    <h2 class="logo-text">FAST ONE</h2>
+</div>
 
             <div class="menu">
                 <ul>

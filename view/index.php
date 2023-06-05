@@ -27,6 +27,7 @@ if (isset($_GET['search_value'])) {
 <head>
     <title>resaweb</title>
     <link rel="stylesheet" href="style.css">
+ 
     <style>
     .logo-img {
         width: 70px;
@@ -59,7 +60,7 @@ if (isset($_GET['search_value'])) {
 
             <div class="menu">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="index.php">ACCEUIL</a></li>
                     <li><a href="Voitures.php">VOITURES</a></li>
                     <li><a href="Circuit.php">CIRCUITS</a></li>
                    
@@ -218,10 +219,10 @@ if (isset($_GET['search_value'])) {
         </div>
         
     <?php endforeach; ?>
-</></div>
+</div>
 
     
-    
+ 
 
    
       
@@ -230,9 +231,7 @@ if (isset($_GET['search_value'])) {
 <br>
 <br>
       
-    
 
-    
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
