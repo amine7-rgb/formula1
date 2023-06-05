@@ -39,11 +39,9 @@ if (isset($_GET['id'])) {
 
             <div class="menu">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="#">VOITURE</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">CONCEPTION</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <li><a href="index.php">HOME</a></li>
+                    <li><a href="Voitures.php">VOITURES</a></li>
+                    <li><a href="Circuit.php">CIRCUITS</a></li>
                 </ul>
             </div>
 
@@ -144,8 +142,9 @@ if (isset($_GET['id'])) {
         <div class="row" style="width: 40%;">
         <img class="car-image" src="./uploads/<?php echo $car['image']; ?>" alt="Description de l'image">
         <br>
-        <p style="margin-top: 100px; margin-right: 50px; text-align: center; font-size: 18px; font-weight: bold;"><?php echo $car['nom']; ?></p>
-    
+        <p style="margin-top: 100px; margin-right: 50px; text-align: center; font-size: 18px; font-weight: bold;">nom de circuit est :<?php echo $car['nom']; ?></p>
+        <p style="margin-top: 20px; margin-right: 50px; text-align: center; font-size: 18px; font-weight: bold;">description :<?php echo $car['description']; ?></p>
+
 
         </div>
         <iframe src="https://www.google.com/maps/d/embed?mid=1h-sOdukyAEyCbtZz4fRm9ePn1vg3htw&ehbc=2E312F" width="400" height="450"></iframe>

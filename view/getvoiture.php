@@ -37,6 +37,19 @@ if (isset($_GET['id'])) {
     // ...
 }
 
+function generateRandomReference() {
+    $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    $reference = '';
+
+    // Generate a random 6-character reference
+    for ($i = 0; $i < 6; $i++) {
+        $randomIndex = mt_rand(0, strlen($characters) - 1);
+        $reference .= $characters[$randomIndex];
+    }
+
+    return $reference;
+}
+
  ?>
 
 
@@ -178,10 +191,18 @@ if (isset($_GET['id'])) {
             <input type="hidden" name="id" />
 
             <label for="date">Date :</label>
-            <input type="date" name="date" id="date" required>
+    <input type="date" name="date" id="date" value="<?php echo date('Y-m-d'); ?>" required>
+      <script>
+        // Get the current date
+        var currentDate = new Date().toISOString().split('T')[0];
 
-            <label for="reference">Référence :</label>
-            <input type="text" name="reference" id="reference" required>
+        // Set the minimum date for the date input
+        document.getElementById("date").min = currentDate;
+    </script>
+
+
+    <label for="reference">Référence :</label>
+    <input type="text" name="reference" id="reference" value="<?php echo generateRandomReference(); ?>" disabled>
 
             <label for="id_equipe">Équipe :</label>
             <select name="id_equipe">
@@ -197,12 +218,18 @@ if (isset($_GET['id'])) {
                 <?php endforeach; ?>
             </select>
 
-            <label for="id_client">Client :</label>
-            <select name="id_client">
-                <?php foreach ($clients as $caa): ?>
-                    <option value="<?php echo $caa['id'] ?>"><?php echo $caa['nom'] ?></option>
-                <?php endforeach; ?>
-            </select>
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" pattern="[A-Z][a-zA-Z]{2,}" title="Le nom doit commencer par une lettre majuscule et avoir une longueur minimale de 3 caractères." required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="prenom" id="prenom" pattern="[A-Z][a-zA-Z]{2,}" title="Le prénom doit commencer par une lettre majuscule et avoir une longueur minimale de 3 caractères." required>
+
+
+         
+            <label for="mail">Email :</label>
+            <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+          
             <br>
 
 

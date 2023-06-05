@@ -293,8 +293,8 @@ function affichercircuit(){
 
 
 function Ajouterreservation($ser) {
-    $sql = "INSERT INTO `reservation` (`id`, `date`, `reference`, `id_circuit`, `id_equipe`, `id_client`)
-            VALUES (:id, :date, :reference, :id_circuit, :id_equipe, :id_client)";
+    $sql = "INSERT INTO `reservation` (`id`, `date`, `reference`, `id_circuit`, `id_equipe`, `nom`, `prenom`, `mail`)
+            VALUES (:id, :date, :reference, :id_circuit, :id_equipe, :nom, :prenom, :mail)";
     $db = config::getConnexion();
     try {
         $recipesStatement = $db->prepare($sql);
@@ -304,7 +304,9 @@ function Ajouterreservation($ser) {
             ':reference' => $ser->getreference(),
             ':id_circuit' => $ser->getid_circuit(),
             ':id_equipe' => $ser->getid_equipe(),
-            ':id_client' => $ser->getid_client()
+            ':nom' => $ser->getnom(),
+            ':prenom' => $ser->getprenom(),
+            ':mail' => $ser->getmail(),
         ]);
     } catch (Exception $e) {
         die("erreur:".$e->getMessage());
